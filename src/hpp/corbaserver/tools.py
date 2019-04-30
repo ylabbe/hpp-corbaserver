@@ -6,12 +6,12 @@ from .client import CorbaError, _getIIOPurl
 def loadServerPlugin (context, plugin, url = None):
     client = Tools (url)
     return client.loadServerPlugin (context, plugin)
-loadServerPlugin.__doc__ = _hpp.Tools.loadServerPlugin__doc__
+# loadServerPlugin.__doc__ = _hpp.Tools.loadServerPlugin__doc__
 
 def createContext (context, url = None):
     client = Tools (url)
     return client.createContext (context, plugin)
-createContext.__doc__ = _hpp.Tools.createContext__doc__
+# createContext.__doc__ = _hpp.Tools.createContext__doc__
 
 def Tools(url = None):
     import sys
@@ -30,7 +30,7 @@ def Tools(url = None):
 
     try:
       obj = rootContext.resolve (name)
-    except CosNaming.NamingContext.NotFound, ex:
+    except CosNaming.NamingContext.NotFound:
       raise CorbaError (
         'failed to find the service ``{0}\'\''.format (serviceName))
 
@@ -55,4 +55,4 @@ def Tools(url = None):
 
     return client
 
-Tools.__doc__ = _hpp.Tools__doc__
+# Tools.__doc__ = _hpp.Tools__doc__
