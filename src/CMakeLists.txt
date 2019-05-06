@@ -33,7 +33,6 @@ FOREACH(IDL ${IDL_SOURCES})
   GENERATE_IDL_CPP (hpp/corbaserver/${IDL} ${CMAKE_SOURCE_DIR}/idl/hpp/corbaserver
     HEADER_SUFFIX -idl.hh)
   GENERATE_IDL_PYTHON (${IDL} ${CMAKE_SOURCE_DIR}/idl/hpp/corbaserver
-    ENABLE_DOCSTRING
     STUBS hpp_stubs.corbaserver
     ARGUMENTS
     -Wbmodules=hpp_idl
@@ -55,7 +54,6 @@ ENDFOREACH()
 GENERATE_IDL_CPP (hpp/common ${CMAKE_SOURCE_DIR}/idl/hpp ENABLE_Wba
   HEADER_SUFFIX -idl.hh)
 GENERATE_IDL_PYTHON (common ${CMAKE_SOURCE_DIR}/idl/hpp
-    ENABLE_DOCSTRING
     STUBS hpp_stubs
     ARGUMENTS
     -Wbmodules=hpp_idl
@@ -77,7 +75,6 @@ FOREACH(IDL distances paths steering_methods path_validations _problem configura
     -Wbinc_prefix=hpp/core_idl
     HH_SUFFIX -idl.hh)
   GENERATE_IDL_PYTHON (${IDL} ${CMAKE_SOURCE_DIR}/idl/hpp/core_idl
-      ENABLE_DOCSTRING
       STUBS hpp_stubs.core
       ARGUMENTS
       -Wbmodules=hpp_idl
@@ -103,7 +100,6 @@ FOREACH(IDL constraints)
     -Wbinc_prefix=hpp/constraints_idl
     HH_SUFFIX -idl.hh)
   GENERATE_IDL_PYTHON (${IDL} ${CMAKE_SOURCE_DIR}/idl/hpp/constraints_idl
-      ENABLE_DOCSTRING
       STUBS hpp_stubs.constraints
       ARGUMENTS
       -Wbmodules=hpp_idl
