@@ -77,7 +77,7 @@ class Client:
       raise CorbaError ('failed to narrow the root context')
 
   def _makeClients (self, serviceId, clients, context):
-    for serviceName, class_ in clients.iteritems():
+    for serviceName, class_ in clients.items():
       self._makeClient (serviceId, serviceName, class_, context)
 
 def _getIIOPurl ():
