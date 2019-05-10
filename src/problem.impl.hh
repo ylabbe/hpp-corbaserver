@@ -205,6 +205,12 @@ namespace hpp
 					       CORBA::Boolean constant)
           throw (hpp::Error);
 
+        virtual void setConstraintInferior (const char* constraintName)
+          throw (hpp::Error);
+
+        virtual void setConstraintSuperior (const char* constraintName)
+          throw (hpp::Error);
+
         virtual bool getConstantRightHandSide (const char* constraintName)
           throw (hpp::Error);
 

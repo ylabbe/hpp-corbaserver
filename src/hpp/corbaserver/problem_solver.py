@@ -497,6 +497,12 @@ class ProblemSolver(object):
         return self.hppcorba.problem.setConstantRightHandSide(
             constraintName, constant)
 
+    def setConstraintInferior(self, constraintName):
+        return self.hppcorba.problem.setConstraintInferior(constraintName)
+
+    def setConstraintSuperior(self, constraintName):
+        return self.hppcorba.problem.setConstraintSuperior(constraintName)
+
     ## Get whether right hand side of a numerical constraint is constant
     #  \param constraintName Name of the numerical constraint,
     #  \return whether right hand side is constant

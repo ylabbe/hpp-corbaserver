@@ -1405,6 +1405,32 @@ namespace hpp
 	}
       }
 
+      // // ---------------------------------------------------------------
+
+      void Problem::setConstraintInferior (const char* constraintName)
+        throw (hpp::Error)
+      {
+        try {
+          problemSolver()->comparisonType (constraintName, constraints::Inferior);
+        }
+        catch (const std::exception& exc) {
+          throw hpp::Error (exc.what ());
+        }
+      }
+
+      // // ---------------------------------------------------------------
+
+      void Problem::setConstraintSuperior (const char* constraintName)
+        throw (hpp::Error)
+      {
+        try {
+          problemSolver()->comparisonType (constraintName, constraints::Superior);
+        }
+        catch (const std::exception& exc) {
+          throw hpp::Error (exc.what ());
+        }
+      }
+
       // ---------------------------------------------------------------
 
       bool Problem::getConstantRightHandSide (const char* constraintName)

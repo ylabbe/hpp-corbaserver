@@ -359,6 +359,12 @@ module hpp
 				   in boolean constant)
       raises (Error);
 
+    void setConstraintSuperior (in string constraintName)
+      raises (Error);
+
+    void setConstraintInferior (in string constraintName)
+      raises (Error);
+
     /// Get whether right hand side of a numerical constraint is constant
     /// \param constraintName Name of the numerical constraint,
     /// \return whether right hand side is constant
